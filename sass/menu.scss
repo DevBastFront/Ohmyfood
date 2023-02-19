@@ -1,0 +1,65 @@
+.banner {
+    position: relative;
+}
+main{
+    background: #f2f2ff;
+}
+.menu {
+    background: #f2f2ff;
+    border-radius: 30px 30px 0px 0px;
+    border: 0px solid black;
+    width: 100%;
+    transform: translate(0%, -5%);
+    padding: 15px;
+
+    h1 {
+        font-size: 20px;
+        width: 343px;
+    }
+    i {
+        margin-left: 35%;
+        font-size: 25px;
+    }
+}
+
+.title-menu {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    text-decoration: underline 2px green;
+}
+
+.card-menu {
+    border: 0px solid black;
+    border-radius: 20px;
+    display: flex;
+    width: 345px;
+    height: 50px;
+    padding: 5px;
+    margin-top: 10px;
+    box-shadow: 0px 5px 20px #a8a5a5;
+
+    h2 {
+        font-weight: bold;
+    }
+
+    .body-menu {
+        margin-left: 10px;
+        padding: 2px;
+    }
+
+    .price-menu {
+        position: absolute;
+        transform: translate(1080%, 90%);
+        font-weight: bold;
+    }
+}
+
+.menu-plats, .menu-desserts {
+    margin-top: 45px;
+}
+
+.btn_shop {
+    text-align: center;
+    margin-top: 30px;
+}
