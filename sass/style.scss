@@ -12,7 +12,6 @@ $fontprimary: 'Roboto';
 $fontbold: bold;
 $gradient: linear-gradient($primary, $secondary);
 $btn-style: linear-gradient(to bottom right, $secondary, $primary);
-
 body {
 
     font-family: 'Roboto', sans-serif;
@@ -35,15 +34,18 @@ h1 {
 }
 
 .location-bar {
+    background-color: #d7d6d6;
+    box-shadow: 0px 5px 20px #a8a5a5;
+}
+.location-bar-txt {
     display: flex;
     justify-content: center;
     gap: 15px;
     width: 100%;
-    background-color: #d7d6d6;
-    box-shadow: 0px 5px 20px #a8a5a5;
     padding: 20px;
     font-size: 18px;
     font-weight: bold;
+    margin-left: -25px;
 }
 
 .explore {
@@ -78,7 +80,7 @@ h1 {
     background: linear-gradient(to bottom right, $secondary, $primary);
     
     &:hover {
-      background: $gradient;
+      background: $primary;
     }
   }
 
@@ -87,7 +89,6 @@ h1 {
   padding: 20px;
 
   h1 {
-    margin-left: 20px;
     margin-bottom: 20px;
     font-weight: bold;
     font-size: 20px;
@@ -240,7 +241,7 @@ button[type="submit"]:hover {
           background: -webkit-linear-gradient(90deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 70%);
           background-clip: text;
           -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;        
+          -webkit-text-fill-color: transparent;      
         }
     } 
 
@@ -283,3 +284,5 @@ button[type="submit"]:hover {
 //   * {
 //     outline: 1px solid red;
 // }
+
+
