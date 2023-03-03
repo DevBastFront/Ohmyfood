@@ -15,13 +15,37 @@ main{
     
     h1 {
       font-family: $fonttitle;
+      padding-top: 10px;
+      font-size: 25px;
     }
+}
+
+.heart-menu {
+  margin-left: 22%;
+}
+
+.heart-menu-fr {
+  margin-left: 32%;
 }
 .line-menu {
   width: 50px;
   border: 2px solid $tertiary;
   margin-top: 7px;
   margin-bottom: 15px;
+  margin-left: 10px;
+}
+
+.menu {
+  border-radius: 10px;
+  position: relative;
+  transform: translate(0, -5%);
+  background: #f2f2ff;
+}
+
+
+
+.menu h1 {
+  margin-left: 10px;
 }
 
  .card-menu {
@@ -45,8 +69,11 @@ main{
       animation-delay: $animation-delay * 4;
     }    
     &:nth-child(5) {
-        animation-delay: $animation-delay * 5;
-      } 
+      animation-delay: $animation-delay * 5;
+    } 
+    &:nth-child(6) {
+      animation-delay: $animation-delay * 6;
+    } 
       
   }
 
@@ -66,11 +93,9 @@ main{
     font-size: 20px;
     text-transform: uppercase;
     margin-top: 30px;
+    margin-left: 10px;
 }
 
-.fa-heart {
-  margin-left: 170px;
-}
 
 .card-menu {
     border: 0px solid black;
@@ -79,18 +104,22 @@ main{
     height: 50px;
     padding: 5px;
     margin-top: 10px;
+    margin-left: 10px;
     cursor: pointer;
     border-radius: 15px;
     box-shadow: 4px 4px 6px #aaa;
     position: relative;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     overflow: hidden;
     transition: padding-right 450ms ease-in-out;
 
     &:hover .progress-bar {
       opacity: 1;
       transform: translate(-50px);
+    }
+    &:hover .price-menu {
+      width: 125px;
+      transition: 350ms ease-in;
+
     }
     &:hover .fa-circle-check {
       transform: rotate(360deg) ;
@@ -103,19 +132,32 @@ main{
     .body-menu {
         margin-left: 10px;
         padding: 2px;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
 
         h2 {
           font-size: 17px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
 
         h3 {
           font-size: 14px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
     }
 
     .price-menu {
-        position: absolute;
-        transform: translate(1080%, 90%);
+        height: 100%;
+        width: 75px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
         font-weight: bold;        
     }
 }
@@ -125,7 +167,7 @@ main{
   justify-content: center;
   background-color: $tertiary;
   width: 50px;
-  height: 63px;
+  height: 100%;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   position: absolute;

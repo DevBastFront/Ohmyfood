@@ -53,6 +53,16 @@ main {
 }
 main h1 {
   font-family: "Shrikhand";
+  padding-top: 10px;
+  font-size: 25px;
+}
+
+.heart-menu {
+  margin-left: 22%;
+}
+
+.heart-menu-fr {
+  margin-left: 32%;
 }
 
 .line-menu {
@@ -60,6 +70,18 @@ main h1 {
   border: 2px solid #99E2D0;
   margin-top: 7px;
   margin-bottom: 15px;
+  margin-left: 10px;
+}
+
+.menu {
+  border-radius: 10px;
+  position: relative;
+  transform: translate(0, -5%);
+  background: #f2f2ff;
+}
+
+.menu h1 {
+  margin-left: 10px;
 }
 
 .card-menu {
@@ -82,6 +104,9 @@ main h1 {
 .card-menu:nth-child(5) {
   animation-delay: 1s;
 }
+.card-menu:nth-child(6) {
+  animation-delay: 1.2s;
+}
 
 @keyframes fade-in {
   from {
@@ -97,10 +122,7 @@ main h1 {
   font-size: 20px;
   text-transform: uppercase;
   margin-top: 30px;
-}
-
-.fa-heart {
-  margin-left: 170px;
+  margin-left: 10px;
 }
 
 .card-menu {
@@ -110,18 +132,21 @@ main h1 {
   height: 50px;
   padding: 5px;
   margin-top: 10px;
+  margin-left: 10px;
   cursor: pointer;
   border-radius: 15px;
   box-shadow: 4px 4px 6px #aaa;
   position: relative;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
   transition: padding-right 450ms ease-in-out;
 }
 .card-menu:hover .progress-bar {
   opacity: 1;
   transform: translate(-50px);
+}
+.card-menu:hover .price-menu {
+  width: 125px;
+  transition: 350ms ease-in;
 }
 .card-menu:hover .fa-circle-check {
   transform: rotate(360deg);
@@ -132,16 +157,29 @@ main h1 {
 .card-menu .body-menu {
   margin-left: 10px;
   padding: 2px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .card-menu .body-menu h2 {
   font-size: 17px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .card-menu .body-menu h3 {
   font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .card-menu .price-menu {
-  position: absolute;
-  transform: translate(1080%, 90%);
+  height: 100%;
+  width: 75px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
   font-weight: bold;
 }
 
@@ -150,7 +188,7 @@ main h1 {
   justify-content: center;
   background-color: #99E2D0;
   width: 50px;
-  height: 63px;
+  height: 100%;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   position: absolute;
@@ -377,23 +415,39 @@ h1 {
 }
 .card .body-card {
   display: flex;
-  flex-direction: column;
   padding: 10px;
-  row-gap: 5px;
   margin-left: 5px;
+  justify-content: space-between;
 }
 .card .body-card h2 {
   font-weight: bold;
+  font-size: 18px;
 }
 .card .body-card .rating-card {
-  position: absolute;
-  transform: translate(1400%, 50%);
   font-size: 20px;
   cursor: pointer;
+  width: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
 }
-.card .body-card .rating-card:hover {
-  color: white;
-  background: rgba(147, 86, 220, 0.15);
+.card .body-card .rating-card:hover .heart-menu-empty {
+  transition: 1s ease-out;
+}
+.card .body-card .rating-card:hover .heart-menu-full {
+  transform: translateX(20px) scale(0.9);
+  transition: 1s ease-in-out;
+}
+.card .body-card .rating-card .heart-menu-full {
+  transform: translateX(20px) scale(0);
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.card .info-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .footer {

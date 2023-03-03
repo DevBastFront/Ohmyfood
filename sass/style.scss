@@ -229,27 +229,51 @@ h1 {
 
     .body-card {
         display: flex;
-        flex-direction: column;
         padding: 10px;
-        row-gap: 5px;
         margin-left: 5px;
+        justify-content: space-between;
 
         h2 {
           font-weight: $fontbold;
+          font-size: 18px;
         }
 
         .rating-card {
-          position: absolute;
-          transform: translate(1400%, 50%);
           font-size: 20px;
           cursor: pointer;
+          width: 50px;
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: flex-end;
 
           &:hover {
-            color: white;
-            background: rgba(147,86,220,0.15); 
+
+            .heart-menu-empty {
+              transition: 1s ease-out;
+            }
+
+            .heart-menu-full {
+              transform: translateX(20px) scale(0.9);
+              transition: 1s ease-in-out;
+
+            }
+
+          }
+
+          .heart-menu-full {
+            transform: translateX(20px) scale(0);
+            background: $gradient;
+            -webkit-background-clip: text;
+            color: transparent;
           }
         }
     } 
+
+    .info-card {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
 
   }
 
@@ -288,8 +312,6 @@ h1 {
 
 
 
-//   * {
-//     outline: 1px solid red;
-// }
+
 
 
