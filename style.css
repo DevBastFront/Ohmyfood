@@ -57,12 +57,13 @@ main h1 {
   font-size: 25px;
 }
 
-.heart-menu {
-  margin-left: 22%;
+.menu-en-tete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
-.heart-menu-fr {
-  margin-left: 32%;
+.menu-en-tete i {
+  margin-right: 10px;
 }
 
 .line-menu {
@@ -213,6 +214,47 @@ main h1 {
   padding-bottom: 30px;
 }
 
+@media screen and (min-width: 768px) {
+  body {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .img-banner img {
+    object-fit: cover;
+    height: 400px;
+    width: 100%;
+  }
+  .bg-menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+  }
+  .menu-plats, .menu-desserts {
+    margin: 0;
+  }
+  .menu {
+    padding: 50px;
+  }
+  .card-menu {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  .btn_shop {
+    margin-top: 10px;
+  }
+  .menu-entrees, .menu-plats, .menu-desserts {
+    padding: 10px;
+  }
+  .menu-resp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .heart-menu {
+    margin-left: 0;
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -480,6 +522,20 @@ h1 {
 .contact {
   text-decoration: none;
   color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .restaurant {
+    width: auto;
+  }
+  .cards, ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer-text {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

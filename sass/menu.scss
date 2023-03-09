@@ -1,3 +1,4 @@
+@import "libs/responsive.scss";
 $card-animation-duration: 0.5s;
 $animation-delay: 0.2s;
 $text-max-width : 50px;
@@ -20,13 +21,16 @@ main{
     }
 }
 
-.heart-menu {
-  margin-left: 22%;
+.menu-en-tete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  i {
+    margin-right: 10px;
+  }
 }
 
-.heart-menu-fr {
-  margin-left: 32%;
-}
 .line-menu {
   width: 50px;
   border: 2px solid $tertiary;
@@ -96,7 +100,6 @@ main{
     margin-left: 10px;
 }
 
-
 .card-menu {
     border: 0px solid black;
     display: flex;
@@ -125,7 +128,6 @@ main{
       transform: rotate(360deg) ;
     }
    
-
     h2 {
         font-weight: bold;
     }
@@ -195,3 +197,56 @@ main{
     margin-top: 30px;
     padding-bottom: 30px;
 }
+
+@media #{$medium-up} {
+  body {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .img-banner img {
+    object-fit: cover;
+    height: 400px;
+    width: 100%;
+  }
+  .bg-menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+  }
+  .menu-plats, .menu-desserts {
+    margin: 0;
+  }
+
+  .menu {
+    padding: 50px;
+  }
+
+  .card-menu {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  .btn_shop {
+    margin-top: 10px;
+  }
+  .menu-entrees, .menu-plats, .menu-desserts {
+    padding: 10px;
+  }
+  .menu-resp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .heart-menu {
+    margin-left: 0;
+
+  }
+
+}
+
+
+// * {
+//   outline: 1px solid red;
+// }
